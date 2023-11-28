@@ -11,6 +11,7 @@ import AddProduct2 from './pages/product/add/AddProduct2'
 import Favorites from './pages/favorites/Favorites'
 import { FavoritesContextType, favoritesContext } from './context/FavoritesContext'
 import ProductDetail from './pages/product/ProductDetail'
+import Parent from './pages/memo/Parent'
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
       <li><Link to='/products/add'>Add Product</Link></li>
       <li><Link to='/products/add2'>Add Product-2</Link></li>
       <li> <Link to='/favorites'>Favorites (<span style={{color:'tomato'}}>{favorites.length}</span>) </Link> </li>
-
+      <li><Link to='/parent'>Parent</Link></li>
     </ul>
 
     <Routes>
@@ -42,6 +43,8 @@ function App() {
       <Route path='/favorites' element={<Favorites />} />
       <Route path='/products/update/:id' element={<UpdateProduct />} />
       <Route path='/products/:id' element={<ProductDetail />} />
+      <Route path='/parent' element={<Parent />} />
+
       
     </Routes>
 
